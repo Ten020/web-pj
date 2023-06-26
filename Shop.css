@@ -18,6 +18,10 @@ body, h1, h2, p, ul, li {
     color: white;
     background-color: rgb(180, 180, 15);
   }
+
+  .active {
+    background-color: rgb(255, 111, 0);
+  }
   
   body {
     font-family: Arial, sans-serif;

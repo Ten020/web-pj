@@ -28,6 +28,9 @@ body {
  padding: 0;
  list-style: none;
 }
+.active {
+  background-color: rgb(255, 111, 0);
+}
 
 div>p {
   color: black;

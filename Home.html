@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Home.css">
+ <title>Banana Media</title>
+</head>
+<body>
+    <div class="header">
+        <img src="Banana_Media.png" alt="Banana Media Logo">
+      </div>
+        <div class="navbar">
+            <a href="Home.html"class="active">Home</a>
+            <a href="Shop.html">Shop</a>
+            <div class="dropdown">
+              <button class="dropbtn">Meer</button>
+              <div class="dropdown-content">
+                <a href="Reperatie.html">Contact</a>
+                <a href="Informatie.html">Over ons</a>
+              </div>
+            </div> 
+          </div>
+        <main>
+          <section>
+            <a href="https://www.megekko.nl/info/game-on-amd?uuid_s=1394&uuid=57a57e3d-a7da-42a3-8e01-65f7818dcdd6"><img src="230601_banner_GameOnAMD.png" alt="AMD Ryzen" style="height:200px;width:100%;"></a> <br>
+                <br>
+            <div class="product-grid">
+              <div class="product">
+                <div class="slideshow-container">
+                  <div class="mySlides01 fade">
+                    <a href="Shop.html"><img src="11_Ducky-One-2-Mini-RGB-MX-Black-toetsenbord.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <div class="mySlides01 fade">
+                    <a href="Shop.html"><img src="10_Intel-Core-i7-13700K.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <div class="mySlides01 fade">
+                    <a href="Shop.html"><img src="9_Corsair-DDR4-Vengeance-LPX-2x8GB-3200-Geheugenmodule.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+                  <a class="next" onclick="plusSlides(1, 0)">❯</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot01" onclick="currentSlide(1, 0)"></span> 
+                    <span class="dot01" onclick="currentSlide(2, 0)"></span> 
+                    <span class="dot01" onclick="currentSlide(3, 0)"></span> 
+                  </div>
+            </div>
+              <div class="product">
+                <div class="slideshow-container">
+                  <div class="mySlides02 fade">
+                    <a href="Shop.html"><img src="1_Asus-ROG-STRIX-G15CF-51240F049W-Gaming-PC.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <div class="mySlides02 fade">
+                    <a href="Shop.html"><img src="2_HP-Pavilion-TG01-2372nd-i7-11700-RTX3060-Desktop-Gaming-PC.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <div class="mySlides02 fade">
+                    <a href="Shop.html"><img src="3_Lenovo-Legion-T5-26AMR5-AMD-Ryzen-7-5800-RTX3070-Desktop-Gaming-PC.jpg" style="width:75%"></a>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+                  <a class="next" onclick="plusSlides(1, 1)">❯</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot02" onclick="currentSlide(1, 1)"></span> 
+                    <span class="dot02" onclick="currentSlide(2, 1)"></span> 
+                    <span class="dot02" onclick="currentSlide(3, 1)"></span> 
+                  </div>
+              </div>
+                  <div class="product">
+                    <div class="slideshow-container">
+                      <div class="mySlides03 fade">
+                        <a href="Shop.html"><img src="4_Lenovo-IdeaCentre-G5-i5-11400F-GTX-1650-super-Desktop-PC-Gaming-PC.jpg" style="width:75%"></a>
+                      </div>
+                      
+                      <div class="mySlides03 fade">
+                        <a href="Shop.html"><img src="5_Lenovo-Legion-T5-26IOB6-i9-11900F-RTX3070-Desktop-Gaming-PC.jpg" style="width:75%"></a>
+                      </div>
+                      
+                      <div class="mySlides03 fade">
+                        <a href="Shop.html"><img src="6_MSI-MEG-Aegis-Ti5-12TJ-011MYS-Desktop-Gaming-PC.jpg" style="width:75%"></a>
+                      </div>
+                      
+                      <a class="prev" onclick="plusSlides(-1, 2)">❮</a>
+                      <a class="next" onclick="plusSlides(1, 2)">❯</a>
+                      
+                      </div>
+                      <br>
+                      
+                      <div style="text-align:center">
+                        <span class="dot03" onclick="currentSlide(1, 2)"></span> 
+                        <span class="dot03" onclick="currentSlide(2, 2)"></span> 
+                        <span class="dot03" onclick="currentSlide(3, 2)"></span> 
+                      </div>
+                  <script>
+                    let slideIndex = [1,1,1];
+                    let slideId = ["mySlides01", "mySlides02","mySlides03"]
+                    let dotId = ["dot01", "dot02", "dot03"]
+                    showSlides(1, 0);
+                    showSlides(1, 1);
+                    showSlides(1, 2);
+                    function plusSlides(n, no) {
+                      showSlides(slideIndex[no] += n, no);
+                    }
+                    function currentSlide(n, no) {
+                     showSlides(slideIndex[no] = n, no);
+                    }
+                    function showSlides(n, no) {
+                      let i;
+                      let x = document.getElementsByClassName(slideId[no]);
+                      let dots = document.getElementsByClassName(dotId[no]);
+                      if (n > x.length) {slideIndex[no] = 1}    
+                      if (n < 1) {slideIndex[no] = x.length}
+                      for (i = 0; i < x.length; i++) {
+                         x[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      x[slideIndex[no]-1].style.display = "block";
+                      dots[slideIndex[no]-1].className += " active";
+                    }
+                    </script>
+            </div>
+          </div>
+        </div>
+        </section>
+      </main>
+                
+        <footer>
+
+        <p>&copy; 2023 Banana Media. Alle rechten voorbehouden.
+
+        </footer>
+</body>
+</html>
